@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css"-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<script type="text/javascript">
+		$(document).ready(function (){
+			$("#btnSumar").click(function (){
+
+			var n1=parseInt($("#num1").val());
+			var n2=parseInt($("#num2").val());
+			var suma=n1+n2;
+			$("#resultado").val(suma);
+
+
+			});			
+		});
+
+		$(document).ready(function (){
+			$("#btnRestar").click(function (){
+
+			var n1=parseInt($("#num1").val());
+			var n2=parseInt($("#num2").val());
+			var resta=n1-n2;
+			$("#resultado").val(resta);
+
+
+			});
+		});
+
+		$(document).ready(function (){
+			$("#btnMultiplicar").click(function (){
+
+			var n1=parseInt($("#num1").val());
+			var n2=parseInt($("#num2").val());
+			var multipicación=n1*n2;
+			$("#resultado").val(multipicación);
+			});
+		});
+
+		$(document).ready(function (){
+			$("#btnDividir").click(function (){
+
+			var n1=parseInt($("#num1").val());
+			var n2=parseInt($("#num2").val());
+			var Division=n1/n2;
+			$("#resultado").val(Division);
+			});
+		});
+
+		$(document).ready(function(){
+			$("#btnCalcular").click(function(){
+				var n= parseInt($("#num").val());
+	
+				var ser1=1;
+				var ser2=1;
+				var res;
+
+				for (var i =0; i <= n; i++) {
+					//res= ser1+ser2;
+					//ser1=ser2;
+					//ser2=res;
+					ser1= ser1 + ser2;
+					ser2= ser1 - ser2;
+					res = ser1;
+				}
+				$("#resultad").val("La serie es "+res);
+			});
+		});			
+		
+	</script>
+<body>
+	<div data-role="page" id="Principal">
+		<div data-role="header">
+			<p>Principal</p>			
+		</div>
+		<div data-role="Content">
+			<p>Contenido</p>
+			<a href="#OperacionesB" data-role="button">Operaciones básicas</a>
+			<a href="#Fibonaci" data-role="button">Serie Fibonacci</a>
+			<a href="#Datos" data-role="button">Datos Desarroollador</a>
+					
+		</div>
+	</div>
+
+	<div data-role="page" id="OperacionesB">
+		<div data-role="header">
+			<p>Operaciones Básicas</p>			
+		</div>
+		<div data-role="Content">
+			<input type="text" id="num1" placeholder="Escribe el primer número">
+			<input type="text" id="num2" placeholder="Escribe el segundo número">
+			<input type="button" id="btnSumar" value="Sumar">
+			<input type="button" id="btnRestar" value="Resta">
+			<input type="button" id="btnMultiplicar" value="Multipicación">
+			<input type="button" id="btnDividir" value="Division">
+			<input type="text" id="resultado" placeholder="Resultado">
+		</div>
+	</div>
+
+	<div data-role="page" id="Fibonaci">
+		<div data-role="header">
+			<p>Serie Fibonacci</p>
+		</div>
+		<div data-role="Content">
+			<input type="text" id="num" placeholder="Escribe el número">
+			<input type="button" id="btnCalcular" value="Calcular Serie Fibonacci">
+			<input type="text" id="resultad" placeholder="Resultado">
+	</div>
+	</div>
+
+	<div data-role="page" id="Datos">
+		<div data-role="header">
+		<p>Datos del Desarrollador</p>
+		</div>
+		<div data-role="Content">
+			<p>Ana Karen Vázquez Sánchez</p>
+			<p>Nº Control: 13940079</p>
+			<p>Telefono: 2761068643</p>
+			<p>E-mail: krnsnchz36@gmail.com</p>
+			<p>Asignatura: Base de Datos Móviles</p>
+		</div>
+	</div>
+</body>
+</html>
